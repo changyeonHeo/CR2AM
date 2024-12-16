@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+.my .empty_area[data-v-24868902] {
+    padding: 90px 0;
+}
+.empty_area[data-v-24868902] {
+    /* padding: 81px 0 45px; */
+    text-align: center;
+}
+
+body, button, dd, div, dl, dt, fieldset, figcaption, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+*, :after, :before {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+body, button, input, select, table, textarea {
+    color: #222;
+    font-family: Pretendard Variable,Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+body, button, html, input, select, table, textarea {
+    /* -webkit-font-feature-settings: "frac" 0,"numr" 0; */
+    font-feature-settings: "frac" 0,"numr" 0;
+}
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.search_info[data-v-a54c4c26] {
+    padding: 12px 0;
+        border-bottom: 1px solid #ebebeb;
+}
+li, ol, ul {
+    list-style: none;
+}
+.search_info .info_item[data-v-a54c4c26] {
+    color: rgba(34,34,34,.5);
+    font-size: 12px;
+    letter-spacing: -.06px;
+    padding-left: 7px;
+    position: relative;
+}
+li, ol, ul {
+    list-style: none;
+}
+body, button, dd, div, dl, dt, fieldset, figcaption, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+*, :after, :before {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.period_search[data-v-77765e40] {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+}
+.period_calendar_wrapper[data-v-14e5ae1c] {
+    display: flex;
+}
+.period_btn_box[data-v-14e5ae1c] {
+    margin-left: 4px;
+}
+.btn_search[data-v-14e5ae1c] {
+    background-color: #222;
+    border: 1px solid #d3d3d3;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    height: 32px;
+    letter-spacing: -.07px;
+    line-height: 30px;
+    padding: 0 16px;
+}
+button {
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border-radius: 0;
+    outline: none;
+}
+body, button, input, select, table, textarea {
+    font-family: Pretendard Variable,Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+body, button, html, input, select, table, textarea {
+    font-feature-settings: "frac" 0,"numr" 0;
+}
+
+button {
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    padding-block: 1px;
+    padding-inline: 6px;
+}
+.period_calendar[data-v-14e5ae1c] {
+    position: relative;
+}
+.period_calendar .calendar_wrap[data-v-14e5ae1c] {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    display: inline-block;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 30px 0 12px;
+    position: relative;
+    vertical-align: top;
+    width: 120px;
+}
+.period_calendar .calendar_wrap[data-v-14e5ae1c] {
+    cursor: pointer;
+    line-height: 30px;
+}
+.period_calendar[data-v-14e5ae1c] .vc-popover-content-wrapper {
+    transform: translate(-1px,30px)!important;
+}    
+.vc-popover-content-wrapper[data-v-4cb7b681]:not(.is-interactive) {
+    pointer-events: none;
+}
+.vc-popover-content-wrapper[data-v-4cb7b681] {
+    --popover-horizontal-content-offset: 8px;
+    --popover-vertical-content-offset: 10px;
+    --popover-slide-translation: 15px;
+    --popover-transition-time: 0.14s ease-in-out;
+    --popover-caret-horizontal-offset: 18px;
+    --popover-caret-vertical-offset: 8px;
+    position: absolute;
+    display: block;
+    outline: none;
+    z-index: 10;
+}
+.period_calendar .cal_btn[data-v-14e5ae1c] {
+    background-image: url(/_nuxt/assets/calendar-off.e91e3c32.svg);
+    background-size: 18px 18px;
+    height: 18px;
+    margin-top: -9px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 18px;
+}
+.period_calendar .cal_input[data-v-14e5ae1c] {
+    color: rgba(34,34,34,.8);
+    cursor: default;
+    font-size: 13px;
+    letter-spacing: -.07px;
+    width: 100%;
+    height: 30px;
+}
+input, textarea {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    padding: 0;
+    resize: none;
+}
+.period_calendar .swung_dash[data-v-14e5ae1c] {
+    color: rgba(34,34,34,.8);
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: -.21px;
+    line-height: 32px;
+}
+.md .period_month[data-v-77765e40] {
+    display: none;
+}
+.period_month[data-v-77765e40] {
+    margin-right: 20px;
+}
+.month_item[data-v-77765e40], .month_list[data-v-77765e40] {
+    display: flex;
+}
+.month_item.custom>.month_link[data-v-77765e40] {
+    background-color: #222;
+    border-color: #d3d3d3;
+    color: #fff;
+}
+.month_link[data-v-77765e40] {
+    border: 1px solid #ebebeb;
+    display: flex;
+    font-size: 13px;
+    height: 32px;
+    justify-content: center;
+    letter-spacing: -.07px;
+    line-height: 30px;
+    min-width: 62px;
+    padding: 0 12px;
+}
+.month_item.custom[data-v-77765e40] {
+    display: none;
+}
+.month_item+.month_item[data-v-77765e40] {
+    margin-left: 4px;
+}
+.period_search[data-v-77765e40] {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+}
+.purchase_list_tab.detail_tab[data-v-2cbb289b] {
+    background-color: #fff;
+    border-radius: 0;
+	margin-top: 0;
+}
+.purchase_list_tab[data-v-2cbb289b] {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.tab_item[data-v-2cbb289b] {
+    display: table-cell;
+    text-align: center;
+}
+.purchase_list_tab.detail_tab .tab_link[data-v-2cbb289b] {
+    border-bottom: 1px solid #d3d3d3;
+    height: 68px;
+    padding-top: 12px;
+}
+.tab_link[data-v-2cbb289b] {
+    display: block;
+    position: relative;
+}
+.purchase_list_tab.detail_tab .count[data-v-2cbb289b] {
+    font-size: 20px;
+    letter-spacing: -.1px;
+    line-height: 24px;
+    margin-top: 0;
+}
+.tab_link .count[data-v-2cbb289b] {
+    font-weight: 700;
+}
+dd {
+    display: block;
+    margin-inline-start: 10px;
+    margin-right: 10px;
+}
+a {
+    color: inherit;
+}
+.tab_link .title[data-v-2cbb289b] {
+    font-size: 13px;
+    letter-spacing: -.07px;
+}
+dt {
+    display: block;
+}
+.tab_link[data-v-2cbb289b] {
+    display: block;
+    position: relative;
+}
+.container.my .snb_area+div[data-v-0adb81cc] {
+    flex: 1;
+}
+.container.my .content_area[data-v-0adb81cc] {
+    min-height: 380px;
+    overflow: hidden;
+}
+element.style {
+    display: none;
+}
+.content_title[data-v-61e7a8a3] {
+    display: flex;
+}
+.purchase_list_tab[data-v-2cbb289b] {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.container.my[data-v-0adb81cc] {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding: 40px 40px 160px;
+}
+.purchase_list_tab.detail_tab .tab_on .count[data-v-2cbb289b] {
+    color: #f15746;
+}
+.my .empty_area .btn[data-v-24868902] {
+    margin-top: 12px;
+}
+.outlinegrey[data-v-14ec1f2e] {
+    border: 1px solid #d3d3d3;
+    color: rgba(34,34,34,.8);
+}
+.small[data-v-14ec1f2e] {
+    border-radius: 10px;
+    font-size: 12px;
+    height: 34px;
+    letter-spacing: -.06px;
+    padding: 0 14px;
+}
+.btn[data-v-14ec1f2e] {
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+.purchase_list_tab.detail_tab .tab_on .tab_link[data-v-2cbb289b] {
+    border-bottom: 2px solid #222;
+}
+.purchase_head[data-v-8c632d9a] {
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+    display: flex;
+    padding: 12px;
+}
+.search_info .info_item[data-v-a54c4c26]:before {
+    background-color: rgba(34,34,34,.5);
+    border-radius: 50%;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+}
+.purchase_list_tab.detail_tab .tab_on .title[data-v-2cbb289b] {
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.title[data-v-61e7a8a3] {
+    font-size: 24px;
+    letter-spacing: -.36px;
+}
+.title>h3[data-v-61e7a8a3] {
+    font-size: inherit;
+    line-height: 29px;
+    margin-top: 0;
+}
+h3 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}

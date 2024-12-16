@@ -1,0 +1,128 @@
+
+@charset "UTF-8";
+
+.social_img[data-v-82a348c4] {
+   max-width: 300px !important;
+}
+.btn {
+   margin-top: 20px;
+}
+.tac {
+   text-align: center !important;
+}
+.btn.tac span {
+   display: inline-block;
+   margin: 0 2px;
+}
+.box_btn {
+   text-align: center;
+   verticl-align: top;
+}
+.box_btn > * {
+   display: inline-block;
+   margin: 0;
+   border: 1px solid #333;
+   outline: none;
+   background: #333;
+   color: #fff !important;
+   font-weight: normal;
+   text-align: center;
+   vertical-align: middle;
+   white-space: nowrap;
+   cursor: pointer;
+   -webkit-appearance: none;
+   transition: all .2s ease;
+}
+.box_btn.fs15 > * {
+   font-size: 15px !important;
+}
+.box_btn.h45 > * {
+   height: 45px;
+   padding: 0;
+   line-height: 43px;
+}
+.box_btn.w144 > * {
+   width: 144px;
+}
+
+.review_write {
+   padding-bottom: 13px;
+}
+
+div {
+   color: rgb(51, 51, 51);
+   font-size: 12px;
+   line-height: 1.6;
+   vertical-align: baseline;
+   margin: 0px;
+   padding: 0px;
+   border-width: 0px;
+   border-style: initial;
+   border-color: initial;
+   border-image: initial;
+   outline: 0px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.select_img img {
+   margin: 20px 0;
+    width: 130px;
+    height: 100px;
+}
+
+label {
+   display: inline-block;
+   width: 100px;
+   padding: 5px;
+}
+
+label[for='bcontent'] {
+   display: block;
+}
+
+input {
+   width: 150px;
+}
+
+textarea#bcontent {
+   width: 400px;
+   height: 180px;
+}
+
+div#container_box { 
+   float:right; 
+   width:calc(100% - 200px - 20px); 
+}
+   
+.ta2, .ta2 th, .ta2 td {
+        border: 1.3px solid #CFCFCF;
+        padding: 8px;
+        text-align: center;
+        font-size: 15px;
+        border-radius: 7px;
+    } 
+    
+.btn12 {
+   background-color : black;
+   width : 90px;
+   height : 30px;
+   color: white;
+   /* font-family:Pretendard Variable; */
+}          
+
+.btn13 {
+   background-color : #949494;
+   width : 90px;
+   height : 30px;
+   color: white;
+   /* font-family:Pretendard Variable; */
+   margin-right: 311px;
+   margin-top: 10px;
+}   
+
+
+
+

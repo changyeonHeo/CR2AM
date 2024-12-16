@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ <mapper namespace="com.example.demo.mapper.BoardMapper">
+
+   <insert id="insertBoard" parameterType="BoardDTO">
+      insert into board2 values (board_seq.nextval,#{mem},#{bcontent},#{btitle},sysdate,#{bimage},#{id})      
+   </insert>
+    
+    <select id="getBoardCount" resultType="Integer">
+       select count(*) from board2
+    </select>  
+    
+    <delete id="deleteBoard" parameterType="int">
+       delete from board2 where bnum =#{bnum}
+    </delete>
+    
+    <select id ="listBoard" resultType="BoardDTO" parameterType="java.util.Map">
+       select * from (select rownum rn,A.*from
+       (select * from board2 where id = #{id} order by bnum desc)A)
+       where rn between #{start} and #{end}      
+    </select>
+    
+    <update id="updateBoard" parameterType="BoardDTO">
+         update board2 set mem=#{mem}, bcontent=#{bcontent}, btitle=#{btitle}, bregdate=sysdate,
+         bimage=#{bimage} where bnum=#{bnum}
+    </update>
+    
+    <select id="findBoard" parameterType="java.util.Map" resultType="BoardDTO">
+       select * from (select rownum rn,A.*from
+       (select * from board2 where ${search} like #{searchString} order by bnum desc)A)
+       where rn between #{start} and #{end}
+    </select>
+     
+    <select id="getBoard"  resultType="BoardDTO" parameterType="int">
+       select * from board2 where bnum=#{bnum}
+    </select>
+    
+    <select id="listBoardAll" resultType="BoardDTO" parameterType="java.util.Map">
+       select * from (select rownum rn,A.*from
+       (select * from board2 order by bnum desc)A)
+       where rn between #{start} and #{end}
+    </select>
+    <select id="getBoardCount2" resultType="Integer">
+       select count(*) from board2 where id=#{id}
+    </select>
+ </mapper>

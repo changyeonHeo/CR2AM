@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.example.demo.mapper.replyMapper">
+   
+   <insert id="insertReply" parameterType="ReplyDTO">
+      insert into reply2 values (#{rnum},reply_seq.nextval,#{mem},#{id},#{rcontent},sysdate)
+   </insert>
+   
+   <select id="getReply" resultType="ReplyDTO" parameterType="java.util.Map">
+       select * from (select rownum rn, A.* from 
+       (select * from reply2 where rnum = #{rnum} order by renum desc) A)
+       where rn between #{start} and #{end}
+   </select>
+   
+   <select id="getReplyCount" resultType="int">
+       select count(*) from reply2
+   </select>
+   
+   <delete id="deleteReply" parameterType="int">
+         delete from reply2 where renum =#{renum}
+   </delete>
+   
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.example.demo.mapper.sizeMapper">
+   
+   <insert id="insertSize" parameterType="sizeDTO">
+      insert into size2 values(#{pname},#{type},#{seq},#{csize})
+   </insert>
+   
+   <insert id="insertProductSize" parameterType="sizeDTO">
+      insert into size2 values(#{pname},#{type},#{seq},#{csize})
+   </insert>
+   
+   <select id="listSizeAll" resultType="sizeDTO">
+      select * from size2
+   </select>
+   
+
+   <select id="listProductSize" parameterType="String" resultType="SizeDTO">
+      select * from size2 where pname = #{pname} order by seq asc
+   </select>
+   
+   <select id="listProductSize2" resultType="String" parameterType="String">
+      select csize from size2 where pname = #{pname} order by seq
+   </select>
+
+   <delete id="delelteProductSize" parameterType="String">
+       delete size2 where pname = #{pname}
+   </delete>
+   
+
+
+
+</mapper>

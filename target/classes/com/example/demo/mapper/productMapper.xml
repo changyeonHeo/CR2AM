@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.example.demo.mapper.productMapper">
+
+   <select id="listProduct" resultType="ProductDTO">
+      select * from product2
+   </select>
+   
+   <insert id="insertProduct" parameterType="ProductDTO">
+      insert into product2 values(prod_seq.nextval,#{pcode},#{cname},#{csname},
+      #{pname},#{pprice},#{pimage},0,#{pcontents},#{ppoint},#{pgender},sysdate,0,0,#{pbrand},0)
+   </insert>
+   
+   <select id="getProduct" parameterType="String" resultType="ProductDTO">
+      select * from product2 where pcode = #{pcode}
+   </select>
+   
+   <select id="reviewProduct" parameterType="String" resultType="ProductDTO">
+      select * from product2 where pname = #{pname}
+   </select>
+   
+   <update id="updateProduct" parameterType="ProductDTO"> 
+      update product2 set cname=#{cname}, csname=#{csname},
+      pname=#{pname}, pprice=#{pprice}, pimage=#{pimage},
+      pcontents=#{pcontents}, ppoint=#{ppoint}, pgender=#{pgender},
+      pbrand=#{pbrand} where pcode=#{pcode}
+   </update>
+   
+   <delete id="deleteProduct" parameterType="String">
+      delete from product2 where pcode = #{pcode}
+   </delete>
+   
+   <!-- 등록된 상품의 겟수를 구하기 위함  -->
+   <select id="getShopCount" resultType="int" parameterType="String">
+      select count(*) from product2
+   </select>
+   
+   <!-- 각 분류별로 리스트를 뽑기 위해서 -->
+   <select id="getProductList" resultType="ProductDTO" parameterType="java.util.Map">
+      select * from (select rownum rn, A.* from
+      (select * from product2 where ${cmd} like #{subject} order by pnum desc)A)
+      where rn between #{start} and #{end}
+   </select>
+   
+   <!-- 모든 상품의 리스트를 뽑기 위해서 -->
+   <select id="getAllProductList" resultType="ProductDTO" parameterType="java.util.Map" >
+      select * from (select rownum rn, A.* from
+      (select * from product2 order by pnum desc)A)
+      where rn between #{start} and #{end}
+   </select>
+   
+   <!-- 혹시모를 사이즈별 상품을 뽑기 위해서 -->
+   <select id="getProductCount" resultType="int" parameterType="java.util.Map">
+      select count(*) from product2 where ${cmd} like #{subject}
+   </select>
+   
+   <select id="getProductSpec" resultType="ProductDTO" parameterType="String">
+      select * from product2 where pnum = #{pnum}
+   </select>
+   
+      <select id="searchProduct" resultType="ProductDTO" parameterType="java.util.Map">
+      select * from product2 where ${cmd} like #{subject}
+   </select>
+   
+   <select id="getProductDetail" resultType="ProductDTO" parameterType="String">
+      select * from product2 where pname = #{pname}
+   </select>
+   
+   <update id="insertProdWish" parameterType="ProductDTO">
+       update product2
+       set pwish = #{pwish}
+       where pcode = #{pcode}
+   </update>
+   
+   <select id="myReviewList" resultType="ReviewDTO" parameterType="java.util.Map">
+       select * from (select rownum rn, A.* from 
+       (select * from review2 where id = #{id} order by rnum desc) A)
+       where rn between #{start} and #{end} 
+   </select>
+   
+   <select id="rankListProduct" resultType="ProductDTO" parameterType="java.util.Map">
+        select * from (select rownum rn, A.* from 
+       (select * from product2 order by pwish desc) A)
+       where rn between #{start} and #{end} 
+   </select>
+   
+   <!-- 1.17 -->
+   <update id="updateProductWishCount" parameterType="String">
+       UPDATE product2
+        SET pwish = pwish + 1
+        WHERE pcode = #{pcode}
+   </update>
+   
+   <update id="updateProductWishCount2" parameterType="String">
+       UPDATE product2
+        SET pwish = pwish - 1
+        WHERE pcode = #{pcode}
+   </update>
+   
+</mapper>

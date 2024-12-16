@@ -1,0 +1,74 @@
+/*style.css
+/*표준 글꼴 서식 스타일*/
+h1,h2,h3,h4,h5,h6{
+	font-family:verdana;
+	color:navy;
+}
+body, td, input, select, textarea, p, th{
+	font-size:13px;
+	font-family:verdana;
+	color:navy;
+	padding:4px;
+}
+
+/*표준 링크 스타일*/
+a:link{
+	color:#000000; text-decoration:none;
+	font-size:13px; font-family:verdana;
+}
+a:visited{
+	color:#C94C0E; text-decoration:none;
+	font-size:13px; font-family:verdana;
+}
+a:hover{ 
+	color:navy; text-decoration:underline;
+	font-size:13px; font-family:verdana;    
+	font-weight: bold;
+}
+
+/*입력 양식 스타일 .은 class로 #은 id로*/
+.box{
+	border:1px solid navy;
+	padding-left:8px;
+}
+.outline{
+	border-top:2px double black;
+	border-bottom:2px double black;
+}
+/* .outline2 {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    box-sizing: border-box; 
+} */
+.outline2 {
+    border-collapse: collapse;
+}
+
+.outline2, .outline2 th, .outline2 td {
+    border: 1px solid gray;
+}
+
+.outline2 th, .outline2 td {
+    padding: 5px;
+}
+
+.m1{
+background-color:#EAF0E8;
+border-bottom:1px dotted #9933CC;
+}
+.m2{
+background-color:#FFCC00;
+/* #E2E5CF */
+border-bottom:1px dotted #9933CC;
+}
+.m3{
+border-bottom:1px dotted navy;
+}
+    
+input{width:150px; padding:5px; border:1px solid #dedede}
+input:read-only{background-color:#dedede}     /* read-only style */
+select{padding:7px; vertical-align:middle}
+
+

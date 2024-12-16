@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.example.demo.mapper.brandMapper">
+
+   <insert id="insertBrand" parameterType="brandDTO"> 
+      insert into brand2 values(brand_seq.nextval, #{pbrand}) 
+   </insert>
+   
+   <delete id="deleteBrand" parameterType="int"> 
+      delete from brand2 where pbnum = #{pbnum} 
+   </delete>
+   
+   <select id="listBrand" resultType="brandDTO">
+      select * from brand2 
+   </select>
+   
+   <update id="updateBrand" parameterType="brandDTO"> 
+      update brand2 set pbrand=#{pbrand} where pbnum = #{pbnum}
+   </update>
+
+   <select id="getBrand" parameterType="int" resultType="brandDTO">
+      select * from brand2 where pbnum = #{pbnum}
+   </select>
+   
+   <!-- kjw -->
+   <!-- int 값으로 브랜드의 이름을 꺼내오기 위해 쓰임 -->   
+   <select id="getSBrand" resultType="String" parameterType="int">
+      select pbrand from brand2 where pbnum = #{pbnum}
+   </select>
+
+</mapper>

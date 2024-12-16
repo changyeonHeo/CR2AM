@@ -1,0 +1,52 @@
+.btn_box .btn[data-v-61e7a8a3].btn_add {
+    border: 1px solid #794f4f;
+    border-radius: 10px;
+    font-size: 12px;
+    height: 34px;
+    letter-spacing: -.06px;
+    line-height: 32px;
+    margin-right: 0;
+    padding: 0 14px
+}
+
+.btn_box[data-v-61e7a8a3] {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding-left: 30px
+}
+
+.btn_box .btn[data-v-61e7a8a3] {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: -.21px;
+    margin-right: -6px;
+    padding: 0 6px
+}
+
+.btn_box .btn[data-v-61e7a8a3]+.btn {
+    margin-left: 8px
+}
+
+.btn_box .btn[data-v-61e7a8a3].btn_add {
+    border: 1px solid #222;
+    border-radius: 10px;
+    font-size: 12px;
+    height: 34px;
+    letter-spacing: -.06px;
+    line-height: 32px;
+    margin-right: 0;
+    padding: 0 14px
+}
+
+.btn_box .btn[data-v-61e7a8a3] .btn_cancel {
+    color: #f15746
+}
+
+.btn_box .icon[data-v-61e7a8a3] {
+    height: 20px;
+    margin-right: 4px;
+    width: 20px
+}

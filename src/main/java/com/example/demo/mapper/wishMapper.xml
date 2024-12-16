@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ <mapper namespace="com.example.demo.mapper.wishMapper">
+  
+   <insert id="insertWish" parameterType="WishDTO">
+      insert into wish2 values (wish_seq.nextval,#{mem},#{pcode},#{pname},#{pprice},#{pimage},#{pbrand})
+   </insert>
+   
+    <select id="listWish" resultType="WishDTO" parameterType="java.util.Map">
+      select * from (select rownum rn, A.* from 
+        (select * from wish2 where mem = #{mem} order by wnum desc) A)
+        where rn between #{start} and #{end}
+    </select>
+    
+    <select id="listWishMypage" resultType="WishDTO" parameterType="int">
+        select * from wish2 where mem = #{mem} order by wnum desc
+    </select>
+    
+    <select id="theListWish" resultType="WishDTO" parameterType="int">
+        select * from wish2 where mem = #{mem} order by wnum desc
+    </select>
+    
+    <select id="countWish" resultType="int" parameterType="int">
+       select count(*) from wish2 where mem = #{mem}
+   </select>
+   
+   <delete id="deleteWish" parameterType="java.util.Map">
+      delete from wish2 where mem = #{mem} AND pcode = #{pcode}
+   </delete>
+   
+   <select id="prodWish" resultType="int" parameterType="String">
+       select count(*) from wish2 where pcode = #{pcode}
+   </select>
+   
+ </mapper>

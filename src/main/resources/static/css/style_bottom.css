@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+footer {
+	bottom: 0;
+}
+
+.footer-all {
+	margin-top: 100px;
+	padding: 20px 0px;
+	height: 350px;
+	background-color: #fff;
+	display: block;
+}
+
+ .footer-division-1 {	
+ 	margin-bottom: -1px;
+	border-bottom: 1px solid transparent;
+}
+
+.footer-division-2 {
+	margin-top: 8px;
+	margind-bottom: 20px;
+}
+
+/* .footer-division-1,
+.footer-division-2 {
+    margin-bottom: 20px; 각 섹션의 아래에 여백을 주기 위한 margin 설정
+    border-bottom: 1px solid transparent; 간격을 나타내는 투명한 border 설정
+} */
+
+.footer-tel {
+    color:  #000;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 37px;
+    font-weight: bold;
+}
+
+.footer-text {
+	color: gray;
+	font-size: 13px; 
+	opacity: 0.9;
+	font-weight: 500;
+	margin-left: 37px;
+}
+
+.footer-link-company {
+	margin-top: 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.footer-sep {
+	font-size: 13px;
+}

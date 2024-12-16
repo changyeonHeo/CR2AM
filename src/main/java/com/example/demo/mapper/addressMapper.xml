@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.addressMapper">
+
+   <insert id="insertAddress" parameterType="AddressDTO">
+      insert into address2 values (address_seq.nextval,#{mem},#{zipcode},#{address1},#{address2},
+      #{name},#{hp1},#{hp2},#{hp3},#{seq})
+   </insert>
+
+   <insert id="insertAddressMember" parameterType="MemberDTO">
+      insert into address2 values (address_seq.nextval,#{mem},#{zipcode},#{address1},#{address2},
+      #{name},#{hp1},#{hp2},#{hp3},1)
+   </insert>
+
+   <delete id="deleteAddress" parameterType="java.util.Map">
+      delete from address2 where mem=#{mem} and seq=#{seq}
+   </delete>
+
+   <select id="listAddress" parameterType="int" resultType="AddressDTO">
+      select * from address2 where mem = #{mem} order by seq
+   </select>
+
+   <update id="updateAddress" parameterType="AddressDTO">
+      update address2 set zipcode = #{zipcode}, address1 = #{address1}, 
+      address2 = #{address2} where mem = #{mem}
+   </update>
+
+   <select id="getAddress" parameterType="int" resultType="AddressDTO">
+      select * from address2 where mem = #{mem}
+   </select>
+
+   <update id="updateSeqUnder" parameterType="java.util.Map">
+      update address2 set seq = seq + 1 where mem = #{mem} and seq &lt; #{seq}
+   </update>
+   
+   <update id="changeSeq" parameterType="java.util.Map">
+      update address2 set seq = 1 where mem = #{mem} and anum = #{anum}
+   </update>
+   
+   <select id="MaxSeq" resultType="int" parameterType="int">
+      select max(seq) from address2 where mem = #{mem}
+   </select>
+</mapper>

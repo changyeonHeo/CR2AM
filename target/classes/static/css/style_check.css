@@ -1,0 +1,162 @@
+
+@charset "UTF-8";
+
+body,button,dd,div,dl,dt,fieldset,
+figcaption,figure,form,h1,h2,h3,h4,h5,h6,
+input,legend,li,ol,p,select,table,td,textarea,th,ul {
+    margin: 0;
+    padding: 0
+}
+
+*,:after,:before {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box
+}
+
+body,button,input,select,table,textarea {
+    color: #222;
+    font-family: Pretendard Variable,Pretendard,
+    -apple-system,BlinkMacSystemFont,system-ui,Segoe UI,
+    Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol
+}
+
+body,button,html,input,select,table,textarea {
+    -webkit-font-feature-settings: "frac" 0,"numr" 0;
+    font-feature-settings: "frac" 0,"numr" 0
+}
+
+body,html {
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    touch-action: manipulation;
+    word-break: break-all
+}
+
+*,:after,:before {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box
+}
+a {
+    -webkit-tap-highlight-color: rgba(0,0,0,.1);
+    color: inherit
+}
+div {
+    display: block;
+}
+
+element.style {
+    display: none;
+}
+
+h4 {
+   margin-top: 0;
+    font-weight: bold;
+}
+
+
+
+
+.check_area {
+/* width: 85% 만들어서 검수 가 가운데 오게 만듦었음 */
+   width: 85%;
+   padding-left: 100px;
+   padding-bottom: 50px;
+}
+
+.content_check_title {
+    display: flex
+}
+.check_title {
+	display: block;
+	font-size: 15px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;    
+}
+
+.purchase_list_tab.detail_tab {
+   background-color: #fafafa;
+    /* background-color: #fff; */
+    border-radius: 1;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.purchase_list_tab {
+    background-color: #fafafa;
+    border-radius: 12px;
+   /*  display: table; */
+    table-layout: fixed;
+    display: flex;
+    width: 40%
+}
+
+.tab_item {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    text-align: center 
+}
+
+.purchase_list_tab.detail_tab .tab_box {
+	width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 텍스트를 수직으로 중앙 정렬 */
+    justify-content: center; /* 텍스트를 수평으로 중앙 정렬 */
+    padding-top: 12px;
+    position: relative
+}
+
+.purchase_list_tab.detail_tab .tab_on .tab_link {
+    display: flex;
+    align-items: center; /* 텍스트를 수직으로 중앙 정렬 */
+    justify-content: center; /* 텍스트를 수평으로 중앙 정렬 */
+    padding-top: 12px;
+    position: relative
+}
+
+.purchase_list_tab.detail_tab .tab_link {
+    display: flex;
+    align-items: center; /* 텍스트를 수직으로 중앙 정렬 */
+    justify-content: center; /* 텍스트를 수평으로 중앙 정렬 */
+    padding-top: 12px;
+    position: relative
+}
+
+.tab_link[data-v-2cbb289b] {
+    display: block;
+    height: 96px;
+    padding-top: 18px;
+    position: relative
+}
+
+.purchase_list_tab.detail_tab .title[data-v-2cbb289b] {
+    color: rgba(34,34,34,.5)
+}
+
+.tab_link .title[data-v-2cbb289b] {
+    color: rgba(34,34,34,.8);
+    font-size: 30px;
+    letter-spacing: -.07px
+}
+
+.selfont {
+	display: block;
+	font-size: 15px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+	text-decoration: underline; 
+	text-underline-position:under;
+	text-decoration-thickness: 2px;
+}
+

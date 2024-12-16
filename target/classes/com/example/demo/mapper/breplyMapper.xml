@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.example.demo.mapper.breplyMapper">
+
+   <insert id="insertBreply" parameterType="BreplyDTO">
+      insert into breply2 values (#{bnum},breply_seq.nextval,#{mem},#{bcontent},sysdate,#{id})
+   </insert>
+   
+   <select id="getBreply" resultType="BreplyDTO" parameterType="java.util.Map">
+       select * from (select rownum rn, A.* from 
+       (select * from breply2 where bnum = #{bnum} order by brenum asc) A)
+       where rn between #{start} and #{end}
+   </select>
+   
+   <select id="getBreplyCount" resultType="int">
+       select count(*) from breply2
+   </select>
+    
+   <delete id="deleteBreply" parameterType="int">
+         delete from breply2 where brenum =#{brenum}
+   </delete>
+
+</mapper>

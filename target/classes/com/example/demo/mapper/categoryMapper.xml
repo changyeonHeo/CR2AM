@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.example.demo.mapper.categoryMapper">
+
+   <insert id="insertCate" parameterType="CategoryDTO"> 
+      insert into category2 values(cate_seq.nextval, #{ccode}, #{cname}, #{cscode}, #{csname},0) 
+   </insert>
+   
+   <delete id="deleteCate" parameterType="int"> 
+      delete from category2 where cnum = #{cnum} 
+   </delete>
+   
+    <select id="listCate" resultType="CategoryDTO">
+      select * from category2
+   </select>
+   
+   <select id="listCate2" resultType="String">
+      select distinct cname  from category2 
+   </select>
+   
+    <select id="listCate_text" resultType="CategoryDTO">
+        select distinct ccode FROM category2
+   </select> 
+   
+   <select id="listCsname" resultType="CategoryDTO">
+      select ccode, csname, cscode, cname from category2 group by ccode, csname, cscode, cname
+   </select>
+   
+   <update id="updateCate" parameterType="CategoryDTO"> 
+      update category2 set ccode=#{ccode}, cname=#{cname}, cscode=#{cscode}, csname=#{csname} where cnum = #{cnum}
+   </update>
+
+   <select id="getCategory" parameterType="int" resultType="CategoryDTO">
+      select * from category2 where cnum = #{cnum}
+   </select>
+   
+      <select id="getCategoryname" parameterType="int" resultType="String">
+      select cname from category2 where cnum = #{cnum}
+   </select>
+   
+   <select id="getSCategoryname" parameterType="int" resultType="String">
+      select scname from category2 where cnum = #{cnum}
+   </select>
+
+</mapper>

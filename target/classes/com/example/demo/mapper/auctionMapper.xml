@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.auctionMapper">
+
+   <insert id="insertAuction" parameterType="AuctionDTO">
+      insert into auction2
+      values(auction_seq.nextval,#{atype},#{id},#{aid},#{pnum},#{price},#{psize},#{status},sysdate,#{saledate})
+   </insert>
+
+   <select id="listAuctionAll" resultType="AuctionDTO">
+      select * from auction2 order by anum desc
+   </select>
+
+   <select id="listAuction" resultType="AuctionDTO" parameterType="String">
+      select * from auction2 where id=#{id} order by anum desc
+   </select>
+   
+   <select id="auction" resultType="AuctionDTO">
+      select * from auction2 where pnum=#{pnum} and price=#{price} and psize=#{psize}  order by anum
+   </select>
+   
+   <update id="insertAid" parameterType="AuctionDTO">
+      update auction2 set aid = #{aid} where anum = #{anum}
+   </update>
+
+   <select id="listAuctionSecp" resultType="AuctionDTO" parameterType="java.util.Map">
+      ${sql}
+   </select>
+
+   <select id="getAuction" resultType="AuctionDTO"
+      parameterType="int">
+      select * from auction2 where anum = #{anum}
+   </select>
+
+   <select id="listAuctionSpec" parameterType="int" resultType="AuctionDTO">
+      select * from auction2 where atype = #{atype} order by anum desc
+   </select>
+
+   <delete id="deleteAuction" parameterType="int">
+      delete from auction2 where anum = #{anum}
+   </delete>
+
+   <update id="updateAuction" parameterType="AuctionDTO">
+      update auction2 set atype = #{atype}, price = #{price},
+      psize = #{psize}, size = #{size}, status = #{status} 
+      where anum = #{anum}
+   </update>
+
+   <update id="auctionTrading" parameterType="AuctionDTO">
+      update auction2 set price = #{price}, size = #{size}, status = #{status},
+      aid = #{aid} where anum = #{anum}
+   </update>
+
+   <update id="inspectionAuction" parameterType="AuctionDTO">
+      update auction2 set status = #{status} where anum = #{anum}
+   </update>
+
+   <select id="countAvgPrice" resultType="int" parameterType="ProductDTO">
+      select avg(price) from auction2 where psize = #{pbrand} 
+      and pnum = #{pnum} and status = 1
+   </select>
+   
+   <select id="reviewTransForAjax" resultType="AuctionDTO" parameterType="String">
+      select * from auction2 where id = #{id} and atype like 'b%'
+   </select>
+
+</mapper>

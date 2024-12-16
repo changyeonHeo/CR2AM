@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.pay_select {
+   border: 1px solid #c0c0c0;
+   border-radius: 10px;
+   width: 400px;
+   height: 60px;
+   padding: 19px 15px;
+   font-size: 14px;
+}
+
+.pay_select+.pay_select {
+   margin-left: 6px;
+}
+
+.is_select {
+   border: 1px solid #222;
+   font-weight: bold;
+}
+
+.divide {
+   background-color: #f4f4f4; 
+   height: 8px; 
+   margin-top: 11px
+}
+
+.head_text {
+   font-size: 18px; 
+   font-weight: 600; 
+   line-height: 22px;
+}
+
+.benefit {
+   display: flex; 
+}
+
+.benefit+.benefit {
+   margin-top: 5px;
+}
+
+.benefit_object {
+   font-size: 11px; 
+   color: #949494; 
+   font-weight: bold;
+}
+
+.benefit_content {
+   font-size: 10px; 
+   color: #c7c7c7;
+}
+
+.pay_object {
+   font-size: 14px; 
+   color: #c7c7c7; 
+   float: left;
+}
+
+.pay_object_total {
+   font-size: 14px; 
+   float: left;
+   color: black; 
+   font-weight: bold; 
+   margin-top: 7px;
+}
+
+.pay_content {
+   font-size: 14px; 
+   color: black; 
+   float: right;
+}
+
+.pay_content_total { 
+   float: right;
+   color: red; 
+   font-size:21px; 
+   font-weight: bold
+}
+
+.notice_check {
+   align-items: center; 
+   display: flex; 
+   width : auto; 
+   height: 80px;
+}
+
+.notice_main {
+   color: black;
+    font-size: 12px;
+    letter-spacing: -.01px;
+    line-height: 18px;
+}
+
+.notice_main:last-child {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.notice_sub {
+    color: rgba(34,34,34,.5);
+    font-size: 11px;
+    letter-spacing: -.05px;
+    line-height: 16px;
+    margin-top: 4px;
+}
+
+.check_list .mo {
+    padding: 0 32px 32px
+}
+
+.check_item_area {
+    border-top: 1px solid #ebebeb;
+    padding: auto 0;
+}
+
+.check_item_area:first-child {
+    border-top: none;
+}

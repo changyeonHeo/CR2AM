@@ -1,0 +1,828 @@
+@charset "UTF-8";
+
+/* @import url("resources/css/KREAM_basic.css"); */
+
+@import url("resources/css/style_ctop.css"); 
+
+/* 판매누르면  -> 판해하기 - 사이즈선택  */
+
+.container.sell {
+    background-color: #fafafa
+}
+
+/* .content_area {
+    margin: 0 auto;
+    max-width: 780px;
+    min-height: 900px;
+    overflow: hidden;
+    padding: 20px 40px 160px
+} */
+
+.content_area {
+    margin: 0 auto;
+    max-width: 800px;
+    min-height: 900px;
+    overflow: hidden;
+    padding: 20px 40px 160px
+}
+
+.sell_before {
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
+    padding: 32px 32px 28px
+}
+
+.product_info {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%
+}
+
+.product_info .product_thumb {
+    flex: none;
+    height: 80px;
+    width: 80px
+}
+
+
+element.style {
+    background-color: rgb(244, 244, 244);
+    display: none;
+}
+
+.product_info .product_thumb .product {
+    border-radius: 10px
+}
+
+.product {
+    border-radius: 8px;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative
+}
+
+.product:after {
+    background: transparent;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+/* 상품이미지안에 무언가 */
+.display_tag_item.product_inner_tag {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 600;
+    height: 26px;
+    justify-content: center;
+    left: 8px;
+    line-height: 17px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    width: 26px;
+    z-index: 1
+}
+.display_tag_item .tag_text {
+    white-space: nowrap
+}
+
+/* 이미지관련 */
+.detail_stock 
+.product_img,
+.is_exclusive 
+.product_img,
+.lucky_draw_column 
+.product_img,
+.other_stock 
+.product_img,
+.product_img,
+.stock .product_img {
+    height: auto;
+    width: 100%
+}
+
+.product_img {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
+}
+
+.picture {
+    border: none;
+    display: flex;
+}
+
+.image.full_width {
+    height: 100%;
+    width: 100%
+}
+
+.image {
+    image-rendering: auto;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.product_info .product_detail {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 80px;
+    justify-content: center;
+    overflow: hidden;
+    padding-left: 16px
+}
+
+p {
+    /* display: block; */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.product_info .product_detail .code {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1px
+}
+
+.product_info .product_detail p {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap
+/*    white-space: normal; */
+}
+
+.product_info .product_detail .name {
+    font-size: 14px;
+    line-height: 1px
+}
+
+.product_info .product_detail p+p {
+    margin-top: 2px
+}
+
+.product_info .product_detail .translated_name {
+    color: rgba(34,34,34,.5);
+    font-size: 13px;
+	letter-spacing: -.07px;
+    letter-spacing: -.05px;
+    line-height: 2px
+}
+/* 빠른 배송 */
+/* .product_info .badge.shipping_express[data-v-fab9a436] {
+    bottom: auto;
+    margin-top: 6px;
+    position: relative;
+    right: auto
+}
+.badge_product.shipping_express[data-v-9ea01a58] {
+    background-color: #f2f9f6;
+    border-radius: 2px;
+    color: #31b46e;
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 11px;
+    height: 20px;
+    letter-spacing: -.33px;
+    line-height: 11px;
+    padding: 4.5px 5.5px 4.5px 17px;
+    position: relative;
+    vertical-align: top
+}
+
+.badge_product.shipping_express[data-v-9ea01a58]:before {
+    background: url(/_nuxt/assets/ico-express.8dac9dcf.svg) 0 0 no-repeat;
+    background-size: 11px 13px;
+    content: "";
+    height: 13px;
+    left: 3.5px;
+    position: absolute;
+    top: 3px;
+    width: 11px
+} */
+
+/* element.style {
+    display: none;
+} */
+
+.sell_before_select {
+    border-top: 1px solid #ebebeb;
+    min-height: 484px;
+    position: relative
+}
+
+.select_area {
+    min-height: 402px;
+    padding: 22px 0 0 38px;
+}
+
+.select_list {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    -webkit-column-gap: 8px;
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    display: grid;
+    font-size: 0;
+    line-height: 0;
+    row-gap: 8px;
+}
+
+.select_list.grid_1 {
+	margin-left:-40px;
+    grid-template-columns: repeat(1,minmax(0,1fr))
+}
+
+.select_list.grid_2 {
+	margin-left:-40px;
+    grid-template-columns: repeat(2,minmax(0,1fr))
+}
+
+.select_list.grid_3 {
+	margin-left:-40px;
+    grid-template-columns: repeat(3,minmax(0,1fr))
+}
+
+.buy_before 
+.select_item:not(.active),
+.sell_before .select_item:not(.active) {
+    border-color: #ebebeb
+}
+
+.buy_before 
+.select_item,
+.sell_before .select_item {
+    height: 60px
+}
+
+.grid_list .select_item {
+    opacity: 1;
+    width: 100%
+}
+
+.select_item {
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 52px;
+    opacity: 0;
+    overflow: hidden;
+    vertical-align: top;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.select_link {
+    cursor: pointer;
+    height: 100%;
+    width: 100%
+}
+
+.link_inner {
+    margin: 0 auto
+}
+
+.link_inner .size {
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: -3px;
+    overflow: hidden;
+    padding: 0 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.select_link.sell 
+.link_inner .price {
+    color: #31b46e
+}
+
+.link_inner .price {
+    color: #222;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 1px
+}
+
+.buy_before .select_item,
+.sell_before .select_item {
+    height: 60px
+}
+
+.select_item.active {
+    border-color: #222
+}
+
+.order_btn_area {
+    background-color: #fff;
+    border-top: 1px solid #ebebeb;
+    -webkit-column-gap: 6px;
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+    display: flex;
+    padding-top: 20px;
+}
+
+.btn_order.clickable {
+    cursor: pointer
+}
+.btn_order.inventory_ask .box,
+.btn_order.order_buy.bid .box,
+.btn_order.order_buy.buy .box {
+    background-color: #333
+}
+.box {
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 16px 18px 16px 14px;
+    position: relative
+}
+
+.box_sellcho {
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 16px 18px 16px 14px;
+    position: relative;
+} 
+
+.order_case_info[data-v-0496eac7] {
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+/* 
+.btn_order.inventory_ask .order_case_info[data-v-0496eac7]:before {
+    background: url(/_nuxt/assets/ico-express-box.145c19a9.svg) 0 0 no-repeat;
+    background-size: 16px 16px;
+    content: "";
+    display: inline-block;
+    height: 16px;
+    margin-right: 4px;
+    margin-top: 2px;
+    vertical-align: top;
+    width: 16px
+}
+ */
+.btn_order.order_sell.ask 
+.box,.btn_order.order_sell.sell .box {
+    background-color: #41b979
+}
+
+.order_case_info {
+    position: relative;
+    text-align: center;
+    white-space: nowrap
+}
+
+.order_case_info .order_price {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 0 0 2px
+}
+
+.order_case_info .order_desc {
+    color: hsla(0,0%,100%,.8);
+    display: block;
+    font-size: 12px;
+    letter-spacing: -.06px;
+    letter-spacing: -.33px;
+    line-height: 12px;
+    margin: 0 2px
+}
+
+.btn_order {
+    width: 100%;
+}
+
+/* box_sellcho 클래스에 대한 스타일 */
+.btn_order.sell .box_sellcho, .btn_order.order_sell .box_sellcho {
+    width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 16px 18px 16px 14px;
+    position: relative;
+}
+
+.btn_order .box_sellcho {
+    background-color: #41b979;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 판매동의 페이지 / 체크리스트 : title_area 부터 */
+ 
+.check_list.mo {
+    border-top: 8px solid #f4f4f4;
+    margin: 0;
+    padding: 0 24px 12px
+}
+
+.title_area {
+    align-items: center;
+    display: flex;
+/*     line-height: 38px; */
+    line-height: 3px;
+/*     padding: 32px 32px 40px */
+    padding: 0px 27px 27px
+}
+
+.title_area2 {
+    align-items: center;
+    display: flex;
+    line-height: 38px;
+    padding: 32px 0px 40px
+}
+
+.check_title {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -.48px
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.container.sell 
+.check_title 
+.accent_text {
+    color: #31b46e
+}
+
+.br_mo {
+    display: none
+}
+
+.sell_before {
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,.1);
+    padding: 32px 32px 28px
+}
+
+.buy_product_area {
+    padding: 0px 23px 18px;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.buy_product {
+    align-items: center;
+    background-color: #fff;
+	display: flex;
+    padding: 0 32px 12px;
+    margin-right: -19px;
+    margin-left: -25px;
+}
+
+.buy_before 
+.buy_product 
+.product,
+.inventory_item_product 
+.product,
+.layer_market_price 
+.buy_product 
+.product,
+.sell_before 
+.buy_product 
+.product {
+    border-radius: 10px;
+    flex-shrink: 0;
+    height: 80px;
+    padding-top: 0;
+    width: 80px
+}
+
+.buy_before 
+.buy_product 
+.product_img,
+.inventory_item_product 
+.product_img,
+.layer_market_price 
+.buy_product 
+.product_img,
+.sell_before 
+.buy_product 
+.product_img {
+    width: 100%
+}
+
+.buy_info {
+    flex: 1;
+    overflow: hidden;
+    padding-left: 10px;
+	width: 490px;
+    height: 74px;
+}
+
+.model_number {
+    /* display: flex; */
+    font-size: 0
+}
+
+strong {
+    font-weight: bold;
+}
+
+.model_number 
+.text,
+.model_title {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 8px;
+}
+
+.model_number .text {
+    line-height: 17px
+}
+
+.model_ko,.model_title {
+    line-height: 16px;
+    margin-top: 2px
+}
+
+.model_number .text,
+.model_title {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.model_ko {
+    color: rgba(34,34,34,.5);
+    font-size: 13px;
+    letter-spacing: -.07px;
+    letter-spacing: -.05px;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.model_ko,
+.model_title {
+    line-height: 14px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.model_desc {
+    align-items: center;
+/*     display: flex;
+    justify-content: space-between; */
+    margin-top: -6px
+}
+
+.model_desc .size_txt {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 13px;
+    margin-bottom: 5px;
+}
+
+
+.buy_before_check .check_list,
+.sell_before_check .check_list {
+    border-top: 2px solid #222;
+    margin: 0 32px 8px;
+    padding: 0
+}
+
+.sell_before_check {
+    background-color: #fff;
+    padding-top: 20px
+}
+
+.check_item {
+    border-top: 1px solid #ebebeb;
+    padding: 19px 0 20px;
+    height: 110px;
+}
+
+.check_item:first-child {
+    border-top: none;
+    height: 110px;
+/*     height: auto; */
+}
+
+.check_area {
+    align-items: center;
+    display: flex;
+    width : 585px;
+    height: 80px;
+    
+}
+
+.notice_group {
+    word-wrap: break-word;
+/*     margin-right: 20px; */
+    margin-right: 85px;
+    word-break: keep-all;
+}
+
+.notice_maintext {
+    font-size: 15px;
+    /* letter-spacing: -.15px; */
+    letter-spacing: -.01px;
+    line-height: 18px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+.notice_subtext {
+    color: rgba(34,34,34,.5);
+    font-size: 13px;
+    /* letter-spacing: -.07px; */
+    letter-spacing: -.05px;
+    line-height: 16px;
+    margin-top: 4px;
+    width : 480px;
+}
+
+.checkbox_item {
+    margin-left: auto
+}
+
+
+.checkbox_item {
+    font-size: 0;
+    position: relative
+}
+
+.blind,.u_skip {
+    clip: rect(0,0,0,0)!important;
+    height: 1px!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    position: absolute!important;
+    width: 1px!important
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* .custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    기본적인 체크박스의 크기 등을 조정할 수 있습니다.
+    width: 20px;
+    height: 20px;
+} */
+
+.checkbox_item .check_label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative
+}
+			
+input[type="checkbox"]+label {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border: 2px solid #bcbcbc;
+				cursor: pointer;
+}
+
+input[type='checkbox']:checked+label {
+ 	display: block;
+/*    width: 24px;
+    height: 24px;
+    background: url('/resources/img/check.jpg') no-repeat 0 1px / contain; */
+    background-image: url('resources/img/checked.jpg');
+    border: none;
+}
+
+.mo .btn_confirm,
+.sm .btn_confirm {
+    padding-bottom: 32px;
+    padding-left: 24px;
+    padding-right: 24px
+}
+
+.btn_confirm {
+    padding: 0 32px 32px
+}
+
+.solid.disabled,
+.solid:disabled {
+    background-color: #ebebeb;
+    color: #fff;
+    cursor: default
+}
+
+.solid {
+    background-color: #222;
+    color: #fff;
+    font-weight: 700
+}
+
+
+.full {
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    height: 52px;
+    letter-spacing: -.16px;
+    width: 100%;
+    /* background-color: #000; */
+}
+
+#__layout {
+    opacity: 1
+}
+
+/* 구매입착가격자리 버튼 */
+.btn_order .box_buycho {
+    background-color: #41b979;
+}
+
+.btn_order.buy .box_buycho {
+    width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #ef6253; /* 빨간색 배경 */
+    color: #ffffff; /* 하얀색 텍스트 */
+    display: flex;
+    justify-content: center;
+    padding: 16px 18px 16px 14px;
+    position: relative;
+}
+/* .select_link.sell 
+.link_inner .bprice {
+    color: #ef6253;
+}
+ */
+
+
+
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ <mapper namespace="com.example.demo.mapper.reviewMapper">
+
+   <select id="getReviewCount" resultType="int">
+       select count(*) from review2
+   </select>
+   
+   <select id="getMyReviewCount" resultType="int" parameterType="String">
+       select count(*) from review2 where id = #{id}
+   </select>
+   
+    <select id="getProdReviewCount" resultType="int" parameterType="String">
+       select count(*) from review2 where rproduct = #{rproduct}
+   </select>
+    
+   <select id="prodReviewList" resultType="ReviewDTO" parameterType="java.util.Map">
+       select * from (select rownum rn, A.* from 
+       (select * from review2 where rproduct = #{rproduct} order by rnum desc) A)
+       where rn between #{start} and #{end}       
+   </select>
+   
+   <select id="listMyReview" resultType="ReviewDTO" parameterType="java.util.Map">
+       select * from (select rownum rn, A.* from 
+       (select * from review2 where id = #{id} order by rnum desc) A)
+       where rn between #{start} and #{end} 
+   </select>
+  
+   <insert id="insertReview" parameterType="ReviewDTO">
+      insert into review2 values (review_seq.nextval,#{mem},#{id},#{rtitle},#{rcontent},0,#{rproduct},
+      sysdate,#{rimage})
+   </insert>
+
+    <delete id="deleteReview" parameterType="int">
+       delete from review2 where rnum = #{rnum}
+    </delete>
+ 
+    <update id="updateReview" parameterType="ReviewDTO">
+       update review2 set rtitle=#{rtitle}, rcontent=#{rcontent},
+       rproduct=#{rproduct}, regdate=sysdate, rimage=#{rimage} where rnum=#{rnum}
+    </update>
+    
+    <select id="findReview" parameterType="java.util.Map" resultType="ReviewDTO">
+       select * from (select rownum rn,A.*from
+       (select * from review2 where ${search} like #{searchString} order by rnum desc)A)
+       where rn between #{start} and #{end}
+    </select>
+ 
+<!--     <select id="getReview" resultType="ReviewDTO" parameterType="java.util.Map">
+       select * from review2 where rnum = #{rnum} AND id = #{id}
+    </select> -->
+     
+    <select id="getReviewAll" resultType="ReviewDTO" parameterType="java.util.Map">
+       select * from (select rownum rn, A.* from 
+       (select * from review2 order by rnum desc) A)
+       where rn between #{start} and #{end}
+   </select>
+   
+    <select id="getReview"  resultType="ReviewDTO" parameterType="int">
+       select * from review2 where rnum=#{rnum}
+    </select>
+    
+ </mapper>
+ 
+ 
